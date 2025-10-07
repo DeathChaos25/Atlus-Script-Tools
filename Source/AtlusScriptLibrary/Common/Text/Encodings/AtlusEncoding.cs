@@ -42,13 +42,25 @@ public class AtlusEncoding : Encoding
     }
 
     public static AtlusEncoding Persona3 => Create("P3");
+    public static AtlusEncoding Persona3EFIGS => Create("P3_EFIGS");
     public static AtlusEncoding Persona3PortableEFIGS => Create("P3P_EFIGS");
+    public static AtlusEncoding Persona3PortableJapanese => Create("P3P_JP");
+    public static AtlusEncoding Persona3PortableChineseSimplified => Create("P3P_CHS");
+    public static AtlusEncoding Persona3PortableChineseTraditional => Create("P3P_CHT");
+    public static AtlusEncoding Persona3PortableKorean => Create("P3P_Korean");
     public static AtlusEncoding Persona4 => Create("P4");
+    public static AtlusEncoding Persona4Spanish => Create("P4_Spanish");
+    public static AtlusEncoding Persona4GoldenEFIGS => Create("P4G_EFIGS");
+    public static AtlusEncoding Persona4GoldenChineseSimplified => Create("P4G_CHS");
+    public static AtlusEncoding Persona4GoldenChineseTraditional => Create("P4G_CHT");
+    public static AtlusEncoding Persona4GoldenJapanese => Create("P4G_JP");
+    public static AtlusEncoding Persona4GoldenKorean => Create("P4G_Korean");
     public static AtlusEncoding Persona5 => Create("P5");
     public static AtlusEncoding Persona5Chinese => Create("P5_Chinese");
     public static AtlusEncoding Persona5RoyalEFIGS => Create("P5R_EFIGS");
     public static AtlusEncoding Persona5RoyalJapanese => Create("P5R_Japanese");
-    public static AtlusEncoding Persona5RoyalChinese => Create("P5R_Chinese");
+    public static AtlusEncoding Persona5RoyalChineseSimplified => Create("P5R_CHS");
+    public static AtlusEncoding Persona5RoyalChineseTraditional => Create("P5R_CHT");
 
     public static IEnumerable<string> AvailableCharsets =>
         Directory.EnumerateFiles(sCharsetsBaseDirectoryPath, "*.tsv")
@@ -59,13 +71,24 @@ public class AtlusEncoding : Encoding
     public static IReadOnlyDictionary<string, IEnumerable<string>> CharsetAliases { get; } = new Dictionary<string, IEnumerable<string>>()
     {
         { "P3", ["p3", "persona3"] },
-        { "P3P", ["p3p", "p3p_efigs"] },
+        { "P3_EFIGS", ["p3_efigs", "persona3EFIGS", "persona3_EFIGS"] },
+        { "P3P_EFIGS", ["p3p", "p3p_efigs", "p3pefigs"] },
+        { "P3P_CHS", ["p3p_chs", "p3p_chinesesimplified"] },
+        { "P3P_CHT", ["p3p_cht", "p3p_chinesetraditional"] },
+        { "P3P_JP", ["p3p_jp", "p3p_japanese"] },
+        { "P3P_Korean", ["p3p_kor", "p3p_korean"] },
         { "P4", ["p4", "persona4"] },
+        { "P4G_EFIGS", ["p4g", "persona4golden", "p4g_efigs", "p4gefigs"] },
+        { "P4G_JP", ["p4g_jp", "persona4golden_jp", "p4g_japanese", "persona4golden_japanese"] },
+        { "P4G_CHS", ["p4g_chs", "p4g_chinesesimplified", "persona4golden_chinesesimplified"] },
+        { "P4G_CHT", ["p4g_cht", "p4g_chinesetraditional", "persona4golden_chinesetraditional"] },
         { "P5", ["p5", "persona5"] },
         { "P5_Chinese", ["p5chi", "p5chinese", "persona5chi", "persona5chinese" ] },
+        { "P5_Korean", ["p5kor", "p5korean", "persona5kor", "persona5korean" ] },
         { "P5R_EFIGS", ["p5r", "p5r_m5", "p5r_efigs"] },
         { "P5R_Japanese", ["p5r_jp", "p5r_japanese"] },
-        { "P5R_Chinese", ["p5r_chi", "p5r_chinese"] }
+        { "P5R_CHS", ["p5r_chs", "p5r_chinesesimplified"] },
+        { "P5R_CHT", ["p5r_cht", "p5r_chinesetraditional"] }
     };
 
     private Dictionary<string, CodePoint> mCharToCodePoint;
