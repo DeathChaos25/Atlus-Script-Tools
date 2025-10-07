@@ -56,6 +56,7 @@ public class AtlusEncoding : Encoding
     public static AtlusEncoding Persona4GoldenJapanese => Create("P4G_JP");
     public static AtlusEncoding Persona4GoldenKorean => Create("P4G_Korean");
     public static AtlusEncoding Persona5 => Create("P5");
+    public static AtlusEncoding Persona5Korean => Create("P5_Korean");
     public static AtlusEncoding Persona5Chinese => Create("P5_Chinese");
     public static AtlusEncoding Persona5RoyalEFIGS => Create("P5R_EFIGS");
     public static AtlusEncoding Persona5RoyalJapanese => Create("P5R_Japanese");
