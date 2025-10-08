@@ -62,6 +62,7 @@ public class AtlusEncoding : Encoding
     public static AtlusEncoding Persona5RoyalJapanese => Create("P5R_Japanese");
     public static AtlusEncoding Persona5RoyalChineseSimplified => Create("P5R_CHS");
     public static AtlusEncoding Persona5RoyalChineseTraditional => Create("P5R_CHT");
+    public static AtlusEncoding Persona5RoyalKorean => Create("P5R_Korean");
 
     public static IEnumerable<string> AvailableCharsets =>
         Directory.EnumerateFiles(sCharsetsBaseDirectoryPath, "*.tsv")
@@ -89,7 +90,8 @@ public class AtlusEncoding : Encoding
         { "P5R_EFIGS", ["p5r", "p5r_m5", "p5r_efigs"] },
         { "P5R_Japanese", ["p5r_jp", "p5r_japanese"] },
         { "P5R_CHS", ["p5r_chs", "p5r_chinesesimplified"] },
-        { "P5R_CHT", ["p5r_cht", "p5r_chinesetraditional"] }
+        { "P5R_CHT", ["p5r_cht", "p5r_chinesetraditional"] },
+        { "P5R_Korean", ["p5rkor", "p5rkorean", "p5r_korean", "personaroyal5kor", "personaroyal5korean" ] },
     };
 
     private Dictionary<string, CodePoint> mCharToCodePoint;
